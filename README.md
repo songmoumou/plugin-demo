@@ -30,3 +30,57 @@ https://cloud.tencent.com/developer/article/1415420
 https://segmentfault.com/a/1190000015972022
 
 [jpa规则](https://blog.csdn.net/xiang__liu/article/details/80900817)
+
+
+##elasticsearch学习
+> 测试elasticsearch提供的高级REST客户端的API使用  
+  并封装了一套通用的java操作elasticsearch代码  
+
+参考文献：
+
+[ElasticSearch介绍](https://www.jianshu.com/p/403c9d5b1463)
+
+[ES快速入门](https://www.jianshu.com/p/7d687c9dba4f)
+
+[使用Java操作Elasticsearch](https://www.jianshu.com/p/871f33c2d515)
+
+[参考项目地址](https://github.com/luohaipeng/es-java-api)
+
+详细操作见模块内readme
+
+错误汇总：
+
+[elasticsearch-head插件显示未连接](https://blog.csdn.net/qq_27868061/article/details/82963771)
+
+
+
+##spring-es spring集成es
+
+## ES 可视化工具
+Elasticsearch-head
+kibana
+
+
+## solr学习
+
+
+[参考代码](https://github.com/DreamsChaser/solr-demo)
+https://www.cnblogs.com/wdfordream/p/11352053.html
+
+https://www.cnblogs.com/wdfordream/p/11377161.html
+
+问题：solr nvarchar类型放不下长文本，改为clob，需要配置
+transformer="ClobTransformer" 和 clob="true"
+```xml
+  <document>
+      <entity name="lawSolr" transformer="ClobTransformer" query="select ID,DEPT,BUSINESSTYPE,BUSINESSLAW,LAWITEM,FLOWDIAGRAM,FILEDIR from LAW_SOLR">
+        <field column="ID" name="id"/>
+        <field column="DEPT" name="dept"/>
+        <field column="BUSINESSTYPE" name="businessType"/>
+        <field column="BUSINESSLAW" name="businessLaw" clob="true"/>
+        <field column="LAWITEM" name="lawItem" clob="true"/>
+        <field column="FLOWDIAGRAM" name="flowDiagram"/>
+        <field column="FILEDIR" name="fileDir"/>
+      </entity>
+  </document>
+```
