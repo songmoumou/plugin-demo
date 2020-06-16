@@ -84,3 +84,7 @@ transformer="ClobTransformer" 和 clob="true"
       </entity>
   </document>
 ```
+
+
+## db-export
+将数据库字段，表结构导出到doc文件，方便编写数据库设计文档
